@@ -10,7 +10,7 @@ $ ./process.sh
 ```
 
 # Visualization
-For seeing the results checkout the page: [Canarian Recipe book]().
+For seeing the results checkout the page: [Canarian Recipe book](https://cristianabrante.github.io/CanarianRecipeBook/).
 
 ## Authors
 

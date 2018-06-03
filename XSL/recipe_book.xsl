@@ -13,7 +13,7 @@
 
     <!-- Variables que representan los directorios donde almacenaremos los archivos HTML y CSS -->
     <xsl:variable name="HTML_DIR" select='"../docs"'/>
-    <xsl:variable name="CSS_DIR" select='"../CSS"'/>
+    <xsl:variable name="CSS_DIR" select='"CSS"'/>
 
     <!-- Esta funcion convierte una unidad en plural a singular cuando sea necesario -->
     <xsl:function name="functx:transform-singular">
