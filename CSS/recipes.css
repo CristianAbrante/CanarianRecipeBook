@@ -1,0 +1,160 @@
+
+body {
+  height: 100%;
+  background: #FFF5CF; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left,white,#FFF5CF); /*Safari 5.1-6*/
+  background: -o-linear-gradient(right,white,#FFF5CF); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(right,white,#FFF5CF); /*Fx 3.6-15*/
+  background: linear-gradient(to bottom, white,#FFF5CF);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.recipe-title {
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+}
+
+.recipe-title h1, .title h1 {
+  font-family: 'Pacifico', 'Helvetica', sans-serif;
+  font-size: 90px;
+  color: #F8D092;
+  text-shadow: 5px 5px #462C15;
+}
+
+.recipe-title h4, .title h4 {
+  font-family: 'open sans';
+  text-transform: uppercase;
+  font-size: 30px;
+  color: white;
+  border-bottom: 2px dotted white;
+}
+
+.information-bar {
+  background-color: #CA9E6D;
+  font-family: 'open sans';
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+.valign-center > i, .valign-center > span{
+  vertical-align: middle;
+}
+
+.description, .content-box, .difficulty {
+  margin: 15px;
+  padding: 15px;
+  border: 2px dotted #F8D092;
+  font-family: 'open sans';
+  font-size: 15px;
+}
+
+.description h3, .content-box h3 {
+  text-align: center;
+  font-family: 'Pacifico';
+  font-size: 35px;
+  color:#462C15;
+  border-bottom: 1px solid #F8D092;
+  padding-bottom: 5px;
+}
+
+.description p {
+  font-size: 20px;
+}
+
+
+.content-box {
+  border: none;
+  font-family: 'open sans';
+  font-size: 20px;
+  margin-top: 5px;
+  background-color: #FFFCF0;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px grey;
+}
+
+.content-box .ingredient:hover {
+  color: brown;
+}
+
+.content-box li {
+    list-style-type: none;
+    counter-increment: count-me;
+  }
+
+.content-box li::before {
+    content: counter(count-me) ". ";
+    display: block;
+    position: relative;
+    max-width: 0px;
+    max-height: 0px;
+    left: -1.3em;
+    top: .05em;
+    color: brown;
+    font-weight: bold;
+    background-color: brown;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #CA9E6D;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+    color: #462C15;
+    font-family: 'open sans';
+}
+
+footer .material-icons {
+  font-size: 40px;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: brown;
+}
+
+.difficulty {
+  text-align: center;
+  font-size: 15px;
+  font-family: 'open sans';
+}
+
+.difficulty ul {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.difficulty  span {
+  text-align: center;
+
+}
+
+.footer-class {
+  height: 1px;
+  margin: 100px;
+}
+
+@media only screen and (max-width: 770px) {
+  html {
+    height: 100%;
+  }
+  footer .material-icons {
+    font-size: 25px;
+  }
+  .recipe-title h4 {
+      margin-top: 40px;
+  }
+}

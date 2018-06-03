@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+
+<!--Documento XMS que define la estructura de un libro de recetas.
+
+Autores:
+- Juan Pablo Claros Romero
+- Alberto Jesús González Álvarez
+- Cristian Abrante Dorta-->
+
+<xs:schema version="1.0"
+           targetNamespace="http://www.sipc.org"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           xmlns="http://www.sipc.org">
+
+
+    <!--Declaration of simple elements-->
+    <xs:element name="name" type="xs:string"/>
+
+    <xs:element name="photo" type="xs:anyURI"/>
+
+    <xs:element name="description" type="xs:string"/>
+
+    <xs:element name="difficulty">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="fácil"/>
+                <xs:enumeration value="media"/>
+                <xs:enumeration value="difícil"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="type">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="primer plato"/>
+                <xs:enumeration value="segundo plato"/>
+                <xs:enumeration value="guarnición"/>
+                <xs:enumeration value="salsa"/>
+                <xs:enumeration value="postre"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="servings">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="0"/>
+                <xs:maxInclusive value="15"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="procedence">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="El Hierro"/>
+                <xs:enumeration value="La Palma"/>
+                <xs:enumeration value="La Gomera"/>
+                <xs:enumeration value="Tenerife"/>
+                <xs:enumeration value="Gran Canaria"/>
+                <xs:enumeration value="Fuerteventura"/>
+                <xs:enumeration value="Lanzarote"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+
+     <!--Declaration of complex types-->
+    <xs:element name="time">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:integer">
+                    <xs:attribute name="unit" use="required">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="h"/>
+                                <xs:enumeration value="min"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:attribute>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="nutrient">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:integer">
+                    <xs:attribute name="type" use="required">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="kcal"/>
+                                <xs:enumeration value="fat"/>
+                                <xs:enumeration value="proteins"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:attribute>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ingredient">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="number" type="xs:decimal" use="required"/>
+                    <xs:attribute name="unit" default="unidades">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="g"/>
+                                <xs:enumeration value="kg"/>
+                                <xs:enumeration value="l"/>
+                                <xs:enumeration value="puñados"/>
+                                <xs:enumeration value="hojas"/>
+                                <xs:enumeration value="ramas"/>
+                                <xs:enumeration value="vasos"/>
+                                <xs:enumeration value="sobres"/>
+                                <xs:enumeration value="cortezas"/>
+                                <xs:enumeration value="cucharadas"/>
+                                <xs:enumeration value="unidades"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:attribute>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="step">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="number" use="required">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:integer">
+                                <xs:minInclusive value="1"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:attribute>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="nutritional_info">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="nutrient" maxOccurs="3"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="information">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="name"/>
+                <xs:element ref="photo"/>
+                <xs:element ref="description"/>
+                <xs:element ref="difficulty"/>
+                <xs:element ref="type"/>
+                <xs:element ref="time"/>
+                <xs:element ref="servings"/>
+                <xs:element ref="procedence"/>
+                <xs:element ref="nutritional_info" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ingredients">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="ingredient" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="preparation">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="step" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="recipe">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="information"/>
+                <xs:element ref="ingredients"/>
+                <xs:element ref="preparation" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="recipe_book">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="description"/>
+                <xs:element ref="recipe" minOccurs="1" maxOccurs="50"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

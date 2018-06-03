@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../XSL/recipe_book.xsl"?>
+
+<!--Documento XML que representa a un libro de recetas.
+En nuestro caso, lo hemos especificado para un libro de recetas canarias.
+
+Autores:
+- Juan Pablo Claros Romero
+- Alberto Jesús González Álvarez
+- Cristian Abrante Dorta-->
+
+<recipe_book xmlns="http://www.sipc.org"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.sipc.org ../XSD/recipe_book.xsd">
+    
+    <!--Descripción del libro de recetas que estamos elaborando-->
+    <description>Este libro de recetas contiene algunas de las comidas más representativas de Canarias. Son platos de todos los tipos y servirán en diversas ocasiones.</description>
+    
+    <!-- Potaje de coles -->
+    <recipe>
+        <information>
+            <name>Potaje de coles</name>
+            <photo>https://cocinaconmuchoamor.files.wordpress.com/2012/04/dsc04172.png</photo>
+            <description>Esta receta canaria, suele servirse como primer plato o plato único y aporta todos los nutrientes necesarios para una comida saludable.</description>
+            <difficulty>media</difficulty>
+            <type>primer plato</type>
+            <time unit="h">1</time>
+            <servings>5</servings>
+            <procedence>Tenerife</procedence>
+            <nutritional_info>
+              <nutrient type="kcal">400</nutrient>
+              <nutrient type="proteins">200</nutrient>
+            </nutritional_info>
+        </information>
+        <ingredients>
+            <ingredient number="1" unit="kg">coles</ingredient>
+            <ingredient number="200" unit="g">judías</ingredient>
+            <ingredient number="0.5" unit="kg">calabaza</ingredient>
+            <ingredient number="1" unit="kg">papas</ingredient>
+            <ingredient number="1" unit="kg">carne de cerdo</ingredient>
+            <ingredient number="1" unit="unidades">cebolla</ingredient>
+            <ingredient number="1" unit="unidades">cabeza de ajo</ingredient>
+            <ingredient number="0.25" unit="g">comino</ingredient>
+            <ingredient number="0.1" unit="g">sal</ingredient>
+        </ingredients>
+        <preparation>
+            <step number="1">Se pone en un caldero las judías y la carne y se pone a cocinar.</step>
+            <step number="2">Tras 30 minutos, se mezclan las coles picadas y lavadas, la calabaza y un poco de sal.</step>
+            <step number="3">Se hace un majado de una cabeza de ajo, comino y sal.</step>
+            <step number="4">Tras 10 minutos se echan las papas peladas y el majado, removiendo con aceite.</step>
+            <step number="5">Se deja cocinando 45 minutos para que se cocine todo.</step>
+        </preparation>
+    </recipe>
+
+  <!-- Papas arrugadas -->
+    <recipe>
+        <information>
+            <name>Papas arrugadas</name>
+            <photo>https://www.lidl-recetas.es/sites/default/files/recetas/3294_papas-arrugadas-con-mojo-verde_0.jpg</photo>
+            <description>Las papas arrugadas es una manera de cocer las papas muy tradicional de canarias, y normalemente suele acompañarse con mojo verde.</description>
+            <difficulty>fácil</difficulty>
+            <type>guarnición</type>
+            <time unit="min">30</time>
+            <servings>3</servings>
+            <procedence>Tenerife</procedence>
+            <nutritional_info>
+                <nutrient type="kcal">250</nutrient>
+                <nutrient type="fat">50</nutrient>
+            </nutritional_info>
+        </information>
+        <ingredients>
+            <ingredient number="2" unit="kg">papas</ingredient>
+            <ingredient number="1" unit="hojas">col</ingredient>
+            <ingredient number="5" unit="puñados">sal</ingredient>
+        </ingredients>
+        <preparation>
+            <step number="1">Lavamos bien las papas y las metemos en un caldero con agua.</step>
+            <step number="2">Añadimos la sal, y tapamos el caldero con una hoja de col.</step>
+            <step number="3">Tras 20 minutos, pinchamos las papapas con un tenedor a ver si están blandas.</step>
+            <step number="4">Cuando las papas esten blandas retiramos la hoja de col y el agua y sacamos las papas del caldero.</step>
+        </preparation>
+    </recipe>
+
+    <!-- Tollos encebollados -->
+    <recipe>
+        <information>
+            <name>Tollos encebollados</name>
+            <photo>http://www.gastronomia7islas.com/sites/default/files/tollos-con-mojo-rojo.jpg</photo>
+            <description>Dentro de la gastronomía canaria, el pescado tiene un papel fundamental. Los tollos son una de las recetas más famosas.</description>
+            <difficulty>difícil</difficulty>
+            <type>segundo plato</type>
+            <time unit="h">1</time>
+            <servings>4</servings>
+            <procedence>Gran Canaria</procedence>
+            <nutritional_info>
+                <nutrient type="kcal">450</nutrient>
+            </nutritional_info>
+        </information>
+        <ingredients>
+            <ingredient number="1" unit="kg">Tollos pelados</ingredient>
+            <ingredient number="0.5" unit="kg">Cebollas</ingredient>
+            <ingredient number="1" unit="ramas">laurel</ingredient>
+            <ingredient number="1" unit="ramas">tomillo</ingredient>
+            <ingredient number="1" unit="vasos">vino blanco</ingredient>
+            <ingredient number="0.01" unit="g">pimentón</ingredient>
+            <ingredient number="0.01" unit="g">sal</ingredient>
+            <ingredient number="0.01" unit="g">pimienta negra</ingredient>
+        </ingredients>
+        <preparation>
+            <step number="1">Dejar la noche anterior los tollos en remojo.</step>
+            <step number="2">Cortar en trocitos los tollos y ponerlos a hervir durante un cuarto de hora con el laurel.</step>
+            <step number="3">Hacer la fritura con la cebolla, el alurel, el tomillo, el pimentón, el vino blanco y la pimienta negra.</step>
+            <step number="4">Mezclar los tollos con la fritura.</step>
+            <step number="5">Poner a hervir la mezcla.</step>
+        </preparation>
+    </recipe>
+
+    <!-- Carne con papas -->
+    <recipe>
+        <information>
+            <name>Carne con papas</name>
+            <photo>https://cubanosguru-3b6d.kxcdn.com/wp-content/uploads/2016/05/CARNE-CON-PAPAS-03.jpg</photo>
+            <description>La receta de la carne con papas ha pasado de generación en generación en todo el archipiélago.</description>
+            <difficulty>media</difficulty>
+            <type>segundo plato</type>
+            <time unit="h">1</time>
+            <servings>4</servings>
+            <procedence>La Gomera</procedence>
+            <nutritional_info>
+              <nutrient type="kcal">600</nutrient>
+              <nutrient type="proteins">400</nutrient>
+            </nutritional_info>
+        </information>
+        <ingredients>
+            <ingredient number="1" unit="kg">papas</ingredient>
+            <ingredient number="750" unit="g">carne de res</ingredient>
+            <ingredient number="0.5" unit="vasos">vino blanco</ingredient>
+            <ingredient number="1" unit="unidades">cebolla</ingredient>
+            <ingredient number="1" unit="unidades">tomate</ingredient>
+            <ingredient number="1" unit="unidades">zanahoria</ingredient>
+            <ingredient number="0.2" unit="g">pimiento molido</ingredient>
+            <ingredient number="0.2" unit="g">laurel</ingredient>
+            <ingredient number="0.2" unit="g">orégano</ingredient>
+            <ingredient number="0.1" unit="l">aceite de oliva</ingredient>
+            <ingredient number="0.2" unit="g">comino</ingredient>
+            <ingredient number="0.2" unit="g">sal</ingredient>
+        </ingredients>
+        <preparation>
+            <step number="1">Hacer una fritura con tomate, cebolla, laurel, comino, orégano, vino blanco y aceite.</step>
+            <step number="2">Hacer un majado con ajo y perjil, y mezclarlo con la fritura.</step>
+            <step number="3">Adobar la carne y freir luego</step>
+            <step number="4">Cocinar las papas y las zanahorias</step>
+            <step number="5">A los 5 minutos añadir la carne y la firtura y dejer 15 minutos más.</step>
+        </preparation>
+    </recipe>
+
+    <!-- Torta de manteca -->
+    <recipe>
+        <information>
+            <name>Torta de manteca</name>
+            <photo>https://img-global.cpcdn.com/002_recipes/recipes_8676_v1393305603_foto_foto_00005993/1200x630cq70/photo.jpg</photo>
+            <description>La procedencia de este postre es penínsular pero también tiene una gran importancia en Canarias.</description>
+            <difficulty>fácil</difficulty>
+            <type>postre</type>
+            <time unit="min">45</time>
+            <servings>2</servings>
+            <procedence>Lanzarote</procedence>
+            <nutritional_info>
+              <nutrient type="kcal">450</nutrient>
+              <nutrient type="fat">450</nutrient>
+              <nutrient type="proteins">200</nutrient>
+            </nutritional_info>
+        </information>
+        <ingredients>
+            <ingredient number="0.5" unit="kg">Harina</ingredient>
+            <ingredient number="1" unit="unidades">huevo</ingredient>
+            <ingredient number="100" unit="g">pasas</ingredient>
+            <ingredient number="100" unit="g">azúcar</ingredient>
+            <ingredient number="1" unit="vasos">leche</ingredient>
+            <ingredient number="1" unit="sobres">royal</ingredient>
+            <ingredient number="0.2" unit="g">ralladura de limón</ingredient>
+            <ingredient number="0.2" unit="g">matalahúva de limón</ingredient>
+        </ingredients>
+        <preparation>
+            <step number="1">Poner la harina en una fuente.</step>
+            <step number="2">Añadir a la fuente el huevo, el azúcar, las pasas, el sobre de royal y la rayadura de limón.</step>
+            <step number="3">Calentar leche hasta que esté tibia y añadir al bol.</step>
+            <step number="4">Mezclar todo muy bien hasta que se forme la torta.</step>
+            <step number="5">Meter al horno la torta durante 30 minutos.</step>
+        </preparation>
+    </recipe>
+
+    <!-- Leche asada -->
+    <recipe>
+        <information>
+            <name>Leche asada</name>
+            <photo>http://www.lacocinachilena.tk/wp-content/uploads/2016/09/leche-asada.jpg</photo>
+            <description>Influenciado por la inmigración latinoamericana, este postre chileno se hizo muy popular en Canarias.</description>
+            <difficulty>difícil</difficulty>
+            <type>postre</type>
+            <time unit="min">40</time>
+            <servings>5</servings>
+            <procedence>La Palma</procedence>
+            <nutritional_info>
+                <nutrient type="kcal">350</nutrient>
+                <nutrient type="fat">500</nutrient>
+            </nutritional_info>
+        </information>
+        <ingredients>
+            <ingredient number="1" unit="l">leche</ingredient>
+            <ingredient number="0.5" unit="ramas">canela</ingredient>
+            <ingredient number="6" unit="unidades">huevos</ingredient>
+            <ingredient number="2" unit="cortezas">limón</ingredient>
+            <ingredient number="4" unit="cucharadas">azúcar</ingredient>
+        </ingredients>
+        <preparation>
+            <step number="1">Se echan en una fuente los huevos, la leche y el azucar, batiéndolo todo bien.</step>
+            <step number="1">Se añade la canela y las cortezas de limón.</step>
+            <step number="1">Se vuelve a batir, y se pone en una bandeja.</step>
+            <step number="1">Se mete al horno a 250 Cº durante 35 minutos.</step>
+        </preparation>
+    </recipe>
+</recipe_book>
